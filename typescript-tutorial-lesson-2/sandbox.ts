@@ -1,16 +1,39 @@
-// Correct
-let age = 25;
-let charector='yoyo';
-let isBlackBelt=false;
-// some code...
-age = 30; // Reuse the existing variable
-charector='ali';
-isBlackBelt=true;
 
- console.log(age);
+// Arrays
+var names = ['yoyo', 'mario', 'ali'];
+names.push('moshtak');
+// names.push(3);
+names[0] = 'soso';
+// names[0]=3;
+var numbers = [3, 6, 1, 4];
+//numbers.push('momo');
+//numbers[0]='momo';
+numbers[0] = 98;
 
- const circ=(diameter : number)=>{
-    return diameter * Math.PI;
- }
+let mixed=['kil',4,'jojo'];
 
- console.log(circ(5));
+mixed.push(6);
+mixed.push('selen');
+
+
+// object
+
+let ninja={
+    name: "mario",
+    belt: 'black'
+    ,age: 30,
+   
+};
+
+ninja.age=40;
+ninja.name='ali';
+
+// ninja.age='60';
+//ninja.skills =['fighting','soso'];
+
+
+// ninja={
+//    name:'yoyo',
+//    belt:'orang',
+//   // age:30
+// };
