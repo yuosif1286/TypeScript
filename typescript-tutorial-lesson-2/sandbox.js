@@ -1,28 +1,24 @@
-// Arrays
-var names = ['yoyo', 'mario', 'ali'];
-names.push('moshtak');
-// names.push(3);
-names[0] = 'soso';
-// names[0]=3;
-var numbers = [3, 6, 1, 4];
-//numbers.push('momo');
-//numbers[0]='momo';
-numbers[0] = 98;
-var mixed = ['kil', 4, 'jojo'];
-mixed.push(6);
-mixed.push('selen');
-// object
-var ninja = {
-    name: "mario",
-    belt: 'black',
-    age: 30,
-};
-ninja.age = 40;
-ninja.name = 'ali';
-// ninja.age='60';
-//ninja.skills =['fighting','soso'];
-// ninja={
-//    name:'yoyo',
-//    belt:'orang',
-//   // age:30
-// };
+var charector;
+charector = 'ali';
+var ali;
+4;
+var isBolean;
+isBolean = false;
+var ninjas;
+// this not worh must edit to ninjas: string[]=[];
+//ninjas.push('yoyo');
+ninjas = ['aql', 'adsjo', 'oida'];
+var numbers;
+numbers = [3, 4, 6, 8];
+var mixed;
+mixed = [3, 'ali', 'yoyo'];
+mixed.push(true);
+console.log(mixed);
+var uid;
+uid = 87;
+uid = 'saius';
+var ninja;
+ninja = { name: 'yoyo', age: 8 };
+var ninjaTow;
+ninjaTow.name = 'odoi';
+ninjaTow.age = 4;

@@ -1,39 +1,43 @@
+let charector : string;
 
-// Arrays
-var names = ['yoyo', 'mario', 'ali'];
-names.push('moshtak');
-// names.push(3);
-names[0] = 'soso';
-// names[0]=3;
-var numbers = [3, 6, 1, 4];
-//numbers.push('momo');
-//numbers[0]='momo';
-numbers[0] = 98;
+charector='ali';
 
-let mixed=['kil',4,'jojo'];
+let ali : number;
 
-mixed.push(6);
-mixed.push('selen');
+4;
 
+let isBolean: boolean;
 
-// object
+isBolean =false;
 
-let ninja={
-    name: "mario",
-    belt: 'black'
-    ,age: 30,
-   
-};
+let ninjas : string[];
+// this not worh must edit to ninjas: string[]=[];
+//ninjas.push('yoyo');
 
-ninja.age=40;
-ninja.name='ali';
+ninjas=['aql','adsjo','oida'];
 
-// ninja.age='60';
-//ninja.skills =['fighting','soso'];
+let numbers : number[];
+numbers=[3,4,6,8];
 
+let mixed : (string|number|boolean)[];
 
-// ninja={
-//    name:'yoyo',
-//    belt:'orang',
-//   // age:30
-// };
+mixed=[3,'ali','yoyo'];
+mixed.push(true);
+
+console.log(mixed);
+
+let uid: string | number;
+uid=87;
+uid='saius';
+ 
+let ninja : object;
+
+ninja={name:'yoyo',age:8};
+
+let ninjaTow:{
+    name: string,
+    age: number
+}
+
+ninjaTow.name='odoi';
+ninjaTow.age=4
