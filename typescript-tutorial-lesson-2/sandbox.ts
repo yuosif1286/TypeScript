@@ -1,9 +1,16 @@
-const character = 'yoyo';
+// Correct
+let age = 25;
+let charector='yoyo';
+let isBlackBelt=false;
+// some code...
+age = 30; // Reuse the existing variable
+charector='ali';
+isBlackBelt=true;
 
-console.log(character);
+ console.log(age);
 
-const inputs = document.querySelectorAll('input');
+ const circ=(diameter : number)=>{
+    return diameter * Math.PI;
+ }
 
-inputs.forEach(input => {
-  console.log(input);
-});
+ console.log(circ(5));
