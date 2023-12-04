@@ -1,24 +1,27 @@
-var charector;
-charector = 'ali';
-var ali;
-4;
-var isBolean;
-isBolean = false;
-var ninjas;
-// this not worh must edit to ninjas: string[]=[];
-//ninjas.push('yoyo');
-ninjas = ['aql', 'adsjo', 'oida'];
-var numbers;
-numbers = [3, 4, 6, 8];
-var mixed;
-mixed = [3, 'ali', 'yoyo'];
+var age;
+age = 23;
+console.log(age);
+age = 'yooy';
+console.log(age);
+age = true;
+console.log(age);
+age = {
+    name: "momp"
+};
+console.log(age);
+var mixed = [];
+mixed.push(32);
+mixed.push('dwio');
 mixed.push(true);
 console.log(mixed);
-var uid;
-uid = 87;
-uid = 'saius';
 var ninja;
-ninja = { name: 'yoyo', age: 8 };
-var ninjaTow;
-ninjaTow.name = 'odoi';
-ninjaTow.age = 4;
+ninja = {
+    name: 'yoyo',
+    age: 75
+};
+console.log(ninja);
+ninja = {
+    name: 43,
+    age: 'diodwi'
+};
+console.log(ninja);

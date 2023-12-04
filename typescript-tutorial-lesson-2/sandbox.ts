@@ -1,43 +1,49 @@
-let charector : string;
+let age : any;
 
-charector='ali';
+age= 23;
 
-let ali : number;
+console.log(age);
 
-4;
+age='yooy';
+console.log(age);
 
-let isBolean: boolean;
+age=true;
 
-isBolean =false;
+console.log(age);
 
-let ninjas : string[];
-// this not worh must edit to ninjas: string[]=[];
-//ninjas.push('yoyo');
+age={
+    name:"momp"
+}
 
-ninjas=['aql','adsjo','oida'];
+console.log(age);
 
-let numbers : number[];
-numbers=[3,4,6,8];
 
-let mixed : (string|number|boolean)[];
+let mixed : any[] =[];
 
-mixed=[3,'ali','yoyo'];
+mixed.push(32);
+
+mixed.push('dwio');
+
 mixed.push(true);
 
 console.log(mixed);
 
-let uid: string | number;
-uid=87;
-uid='saius';
- 
-let ninja : object;
 
-ninja={name:'yoyo',age:8};
-
-let ninjaTow:{
-    name: string,
-    age: number
+let ninja: {
+    name:any,
+    age : any
 }
 
-ninjaTow.name='odoi';
-ninjaTow.age=4
+ninja ={
+    name:'yoyo'
+    ,age:75
+}
+
+console.log(ninja);
+
+ninja ={
+    name:43
+    ,age:'diodwi'
+}
+
+console.log(ninja);
