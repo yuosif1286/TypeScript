@@ -1,25 +1,10 @@
-// let greet= () => {
-//     console.log("hello , world");
-    
-// }
 
-let greet :Function;
-// greet='hello';
+type StringOrNum= string|number;
+type objectWithName={name: string, uid : StringOrNum};
 
-greet =() => {console.log("Hello , world");
-}
+// const logDetails= (uid :string|Number, item: string) => console.log(`${item} has uid ${uid}`);
 
-greet();
+// const greet= (user:{name:string, uid : string|number})=> console.log(`${user.name} says Hello`);
+const logDetails= (uid :StringOrNum, item: string) => console.log(`${item} has uid ${uid}`);
 
-const add = (a:number,b: number,c:number|string =  10)=>{
-    console.log(a+b);
-    console.log(c);
-}
-
-add(5,3,"yoyo");
-
-const minus =(a: number ,b : number) => a-b;
-
-let result= minus(45,5);
-
-console.log(result);
+const greet= (user:objectWithName)=> console.log(`${user.name} says Hello`);
