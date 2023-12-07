@@ -1,10 +1,22 @@
+let greet : (a: string,b: string)=>void;
 
-type StringOrNum= string|number;
-type objectWithName={name: string, uid : StringOrNum};
+greet=(name:string ,greeting: string)=>
+console.log(`${name} says ${greeting}`);
 
-// const logDetails= (uid :string|Number, item: string) => console.log(`${item} has uid ${uid}`);
+let calc:(a: number ,b:number, c:string)=> number;
+calc=(numOne:number, numtwo:number,action: string)=> numOne+ numtwo;
 
-// const greet= (user:{name:string, uid : string|number})=> console.log(`${user.name} says Hello`);
-const logDetails= (uid :StringOrNum, item: string) => console.log(`${item} has uid ${uid}`);
+calc=(numOne:number, numtwo:number,action:string) =>
+{
+    if(action==='add')
+    {
+      return numOne+ numtwo;
+    }
+    else
+    {
+        return numOne-numtwo;
+    }
+}
+let  logDetails :(obj:{name:string,age:number})=> void;
 
-const greet= (user:objectWithName)=> console.log(`${user.name} says Hello`);
+logDetails=(employee:{name:string,age:number})=> console.log(employee.name,employee.age);

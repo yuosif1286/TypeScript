@@ -1,5 +1,15 @@
 "use strict";
-// const logDetails= (uid :string|Number, item: string) => console.log(`${item} has uid ${uid}`);
-// const greet= (user:{name:string, uid : string|number})=> console.log(`${user.name} says Hello`);
-const logDetails = (uid, item) => console.log(`${item} has uid ${uid}`);
-const greet = (user) => console.log(`${user.name} says Hello`);
+let greet;
+greet = (name, greeting) => console.log(`${name} says ${greeting}`);
+let calc;
+calc = (numOne, numtwo, action) => numOne + numtwo;
+calc = (numOne, numtwo, action) => {
+    if (action === 'add') {
+        return numOne + numtwo;
+    }
+    else {
+        return numOne - numtwo;
+    }
+};
+let logDetails;
+logDetails = (employee) => console.log(employee.name, employee.age);
