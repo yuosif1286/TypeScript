@@ -1,4 +1,19 @@
 import { Invoice } from "./classes/invoice.js";
+const me = {
+    name: 'yoyo',
+    age: 64,
+    speak(text) {
+        console.log(text);
+    },
+    spend(amount) {
+        console.log(`i spend ${amount}`);
+        return amount;
+    }
+};
+const greetPerson = (isperson) => {
+    console.log('helloe', isperson.name);
+};
+greetPerson(me);
 const invOne = new Invoice('ali', 'work in kf', 493);
 const invTwo = new Invoice('mohamed', 'work in kf', 898);
 // invOne.client='alil';
