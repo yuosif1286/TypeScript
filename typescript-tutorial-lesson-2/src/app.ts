@@ -1,24 +1,4 @@
-//Classes
-
-class Invoice{
-// readonly client: string;
-//  details:string;
-// // private details:string;
-// public amount:number;
-
-
-constructor (readonly client:string,private details:string,public amount:number)
-{
-    // this.client=c;
-    // this.details=d;
-    // this.amount=a;
-}
-
-format(){
-    console.log(`${this.client} owes # ${this.amount} for ${this.details}`);
-}
-}
-
+import { Invoice } from "./classes/invoice.js"; 
 
 const invOne= new Invoice('ali','work in kf',493);
 const invTwo= new Invoice('mohamed','work in kf',898);
@@ -33,14 +13,10 @@ invoices.forEach(invo => {
     console.log(invo.client,invo.amount,invo.format());
 });
 
-// const anchor=document.querySelector('a') as HTMLAnchorElement;
-// anchor.innerText="yoyo";
-// console.log(anchor.href);
 
 
 const form=document.querySelector('.new-item-form') as HTMLFormElement;
 
-// console.log(form.children);
 
 //input
 
