@@ -79,14 +79,24 @@ let docOne = addUID({ name: 'yoyo', age: 40 });
 //let docTwo= addUID({age:40});
 // let docTwo=addUID('yoyo');
 console.log(docOne);
+// console.log(docTwo);
+//Enums
+var ResourceType;
+(function (ResourceType) {
+    ResourceType[ResourceType["Book"] = 0] = "Book";
+    ResourceType[ResourceType["AUTHOR"] = 1] = "AUTHOR";
+    ResourceType[ResourceType["FILM"] = 2] = "FILM";
+    ResourceType[ResourceType["DIRECTOR"] = 3] = "DIRECTOR";
+    ResourceType[ResourceType["PERSON"] = 4] = "PERSON";
+})(ResourceType || (ResourceType = {}));
 const docTwo = {
     uid: 1,
-    resourcename: 'doo',
+    resourcType: ResourceType.Book,
     data: { name: 'yoyo' }
 };
 const docThree = {
     uid: 1,
-    resourcename: 'doo',
+    resourcType: ResourceType.DIRECTOR,
     data: ['yoyo', 'ali']
 };
 console.log(docTwo, docThree);

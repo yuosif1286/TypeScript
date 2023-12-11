@@ -124,22 +124,25 @@ declare global {
   console.log(docOne);
  // console.log(docTwo);
   
+//Enums
+enum ResourceType {Book,AUTHOR,FILM,DIRECTOR,PERSON}
+
 // with interface
 
 interface Resource<T>{
     uid:number;
- resourcename:string;
+ resourcType:ResourceType;
  data:T;
 }  
 const docTwo: Resource<object>={
     uid:1,
-    resourcename:'doo',
+    resourcType:ResourceType.Book,
     data:{name:'yoyo'}
 }
 
 const docThree: Resource<string[]>={
     uid:1,
-    resourcename:'doo',
+    resourcType:ResourceType.DIRECTOR,
     data:['yoyo','ali']
 }
 
