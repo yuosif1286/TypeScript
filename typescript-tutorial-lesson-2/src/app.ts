@@ -77,13 +77,16 @@ const list=new  listTemplate(ul);
 
 form.addEventListener('submit',(e:Event) => {
     e.preventDefault();
+    let values:[string,string,number];
+
+ values=[toform.value, details.value,amount.valueAsNumber];
 
     let doc: HasFormatter;
 
     if(type.value==='invoice')
-        doc=new Invoice(toform.value, details.value,amount.valueAsNumber);
+        doc=new Invoice(...values);
 else    {
-    doc=new payment(toform.value, details.value,amount.valueAsNumber);
+    doc=new payment(...values);
 }
 list.render(doc,type.value,'start');
 type.clear();
@@ -147,3 +150,15 @@ const docThree: Resource<string[]>={
 }
 
 console.log(docTwo,docThree);
+
+
+//tuples 
+
+let arr=['toyo',true,43]
+arr[1]='yoyo';
+arr[2]=false;
+
+let tup:[string,number,boolean]=['ali',83,false];
+
+// tup[1]=false;
+tup[0]='dias';
