@@ -1,6 +1,7 @@
 import { Invoice } from "./classes/invoice.js"; 
 import { payment } from "./classes/Payment.js";
 import { HasFormatter } from "./interface/HasFormatter.js";
+import { listTemplate } from "./classes/listTemplate.js";
 // interface
 
 // let docOne: HasFormatter;
@@ -70,6 +71,9 @@ const toform= document.querySelector('#tofrom') as HTMLInputElement;
 const details= document.querySelector('#details') as HTMLInputElement;
 const amount= document.querySelector('#amount') as HTMLInputElement;
 
+const ul=document.querySelector('ul') as HTMLUListElement;
+
+const list=new  listTemplate(ul);
 
 form.addEventListener('submit',(e:Event) => {
     e.preventDefault();
@@ -81,7 +85,22 @@ form.addEventListener('submit',(e:Event) => {
 else    {
     doc=new payment(toform.value, details.value,amount.valueAsNumber);
 }
+list.render(doc,type.value,'start');
+type.clear();
+toform.clear();
+details.clear();
+amount.clear();
 
-    console.log(doc);
-    
-})
+});
+
+// Declare a module to augment the global scope
+declare global {
+    interface HTMLElement {
+      clear(): void;
+    }
+  }
+  
+  // Implement the extension method
+  HTMLElement.prototype.clear = function () {
+    this.innerText = '';
+  };

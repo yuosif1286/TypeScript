@@ -1,5 +1,6 @@
 import { Invoice } from "./classes/invoice.js";
 import { payment } from "./classes/Payment.js";
+import { listTemplate } from "./classes/listTemplate.js";
 // interface
 // let docOne: HasFormatter;
 // let docTow: HasFormatter;
@@ -45,6 +46,8 @@ const type = document.querySelector('#type');
 const toform = document.querySelector('#tofrom');
 const details = document.querySelector('#details');
 const amount = document.querySelector('#amount');
+const ul = document.querySelector('ul');
+const list = new listTemplate(ul);
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     let doc;
@@ -53,5 +56,13 @@ form.addEventListener('submit', (e) => {
     else {
         doc = new payment(toform.value, details.value, amount.valueAsNumber);
     }
-    console.log(doc);
+    list.render(doc, type.value, 'start');
+    type.clear();
+    toform.clear();
+    details.clear();
+    amount.clear();
 });
+// Implement the extension method
+HTMLElement.prototype.clear = function () {
+    this.innerText = '';
+};
