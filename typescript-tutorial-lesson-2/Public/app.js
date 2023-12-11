@@ -66,3 +66,27 @@ form.addEventListener('submit', (e) => {
 HTMLElement.prototype.clear = function () {
     this.innerText = '';
 };
+// implement generic
+const addUID = (obj) => {
+    let uid = Math.floor(Math.random() * 100);
+    return Object.assign(Object.assign({}, obj), { uid });
+};
+//   const addUID=<T extends object>(obj:T)=>{
+//     let uid=Math.floor(Math.random()*100);
+//     return {...obj,uid}
+//   }
+let docOne = addUID({ name: 'yoyo', age: 40 });
+//let docTwo= addUID({age:40});
+// let docTwo=addUID('yoyo');
+console.log(docOne);
+const docTwo = {
+    uid: 1,
+    resourcename: 'doo',
+    data: { name: 'yoyo' }
+};
+const docThree = {
+    uid: 1,
+    resourcename: 'doo',
+    data: ['yoyo', 'ali']
+};
+console.log(docTwo, docThree);

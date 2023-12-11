@@ -104,3 +104,43 @@ declare global {
   HTMLElement.prototype.clear = function () {
     this.innerText = '';
   };
+
+
+  // implement generic
+  const addUID=<T extends {name:string}>(obj:T)=>{
+    let uid=Math.floor(Math.random()*100);
+    return {...obj,uid}
+  }
+//   const addUID=<T extends object>(obj:T)=>{
+//     let uid=Math.floor(Math.random()*100);
+//     return {...obj,uid}
+//   }
+
+  let docOne= addUID({name:'yoyo',age:40});
+   
+  //let docTwo= addUID({age:40});
+  // let docTwo=addUID('yoyo');
+
+  console.log(docOne);
+ // console.log(docTwo);
+  
+// with interface
+
+interface Resource<T>{
+    uid:number;
+ resourcename:string;
+ data:T;
+}  
+const docTwo: Resource<object>={
+    uid:1,
+    resourcename:'doo',
+    data:{name:'yoyo'}
+}
+
+const docThree: Resource<string[]>={
+    uid:1,
+    resourcename:'doo',
+    data:['yoyo','ali']
+}
+
+console.log(docTwo,docThree);
